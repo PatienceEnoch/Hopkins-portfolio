@@ -1,423 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Resume</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Patience Hopkins, a cloud and network engineering student with CompTIA A+, Network+, Linux Essentials, and ITIL 4 Foundation certifications.">
+  <title>Patience Hopkins | Cloud & Network Engineering</title>
   <style>
-    /* basic styles */
-    * {
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f4f8;
-      color: #222;
-      margin: 0;
-      padding: 0;
-    }
-    .dark-mode {
-      background-color: #121212;
-      color: #f0f0f0;
-    }
-    header {
-      background-color: #2c3e50;
-      color: #fff;
-      padding: 50px 20px 60px;
-      text-align: center;
-    }
-    .section-box {
-      background-color: #fff;
-      border-radius: 12px;
-      padding: 20px;
-      margin: 30px auto;
-      max-width: 900px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-    }
-    .dark-mode .section-box {
-      background-color: #1e1e1e;
-    }
-    .nav-button {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      background-color: #2c3e50;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: background-color 0.3s;
-    }
-    .nav-button:hover {
-      background-color: #1a252f;
-    }
-    .dark-mode .nav-button {
-      background-color: #444;
-    }
-    .switch {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      z-index: 1000;
-    }
-    .switch input {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-    .slider {
-      position: relative;
-      display: inline-block;
-      width: 50px;
-      height: 28px;
-      background-color: #ccc;
-      border-radius: 34px;
-      cursor: pointer;
-      transition: background-color 0.4s;
-    }
-    .slider:before {
-      content: "";
-      position: absolute;
-      height: 20px;
-      width: 20px;
-      left: 4px;
-      bottom: 4px;
-      background-color: white;
-      border-radius: 50%;
-      transition: transform 0.4s;
-    }
-    .slider.round {
-      border-radius: 34px;
-    }
-    
-    .slider.round:before {
-      border-radius: 50%;
-    }
-    
-    input:checked + .slider {
-      background-color: #4a90e2;
-    }
-    input:checked + .slider:before {
-      transform: translateX(22px);
-    }
-    .form-group {
-      margin-bottom: 20px;
-    }
-    .form-group label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      font-size: 16px;
-    }
-    .radio-group {
-      display: flex;
-      gap: 15px;
-      margin-top: 5px;
-    }
-    .radio-group label {
-      display: flex;
-      align-items: center;
-      font-weight: normal;
-    }
-    .experience-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
-    }
-    .experience-table caption {
-      font-weight: bold;
-      margin-bottom: 10px;
-      color: #2c3e50;
-      font-size: 1.1em;
-    }
-    .experience-table th, 
-    .experience-table td {
-      border: 1px solid #ddd;
-      padding: 12px;
-      text-align: left;
-    }
-    .experience-table th {
-      background-color: #2c3e50;
-      color: white;
-    }
-    .professional-footer {
-      margin-top: 2rem;
-      padding: 1.5rem;
-      background: linear-gradient(135deg, #2c3e50 0%, #3a4b5e 100%);
-      color: #f5f5f5;
-      text-align: center;
-      border-top: 2px solid #4a90e2;
-    }
-    .footer-content {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .copyright {
-      font-size: 1rem;
-      font-weight: 500;
-      margin: 0 0 0.3rem 0;
-      letter-spacing: 0.4px;
-    }
-    .tagline {
-      font-size: 0.9rem;
-      font-style: italic;
-      color: rgba(255, 255, 255, 0.8);
-      margin: 0;
-      letter-spacing: 0.2px;
-    }
-    
-mark {
-  background-color: #cce5ff; /* Light blue */
-  color: #004085; /* Dark blue text for contrast */
-  padding: 2px 4px;
-  border-radius: 3px;
-}
-
-.dark-mode mark {
-  background-color: #004085; /* Darker blue for dark mode */
-  color: #cce5ff; /* Light blue text for contrast in dark mode */
-}
-
-
-  
+    :root { --navy:#0f2742; --blue:#1769aa; --ink:#172231; --muted:#52606d; --paper:#fff; --bg:#f4f7fa; --line:#d9e2ec; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,Segoe UI,Arial,sans-serif; line-height:1.6; color:var(--ink); background:var(--bg); }
+    a { color:var(--blue); }
+    header { padding:64px 24px 52px; color:#fff; background:linear-gradient(135deg,#0b1f35,#174b75); }
+    header div, main, footer div { width:min(960px,calc(100% - 40px)); margin:auto; }
+    h1 { margin:0 0 8px; font-size:clamp(2.1rem,6vw,3.6rem); line-height:1.1; }
+    header p { max-width:760px; margin:8px 0; font-size:1.08rem; }
+    .credentials { color:#d8eaf8; }
+    nav { margin-top:26px; display:flex; flex-wrap:wrap; gap:12px; }
+    .button { display:inline-block; padding:10px 16px; border-radius:7px; color:#fff; background:var(--blue); text-decoration:none; font-weight:700; }
+    .button.secondary { background:transparent; border:1px solid #a9c8df; }
+    main { padding:28px 0 56px; }
+    section { margin:20px 0; padding:28px; background:var(--paper); border:1px solid var(--line); border-radius:12px; box-shadow:0 6px 20px rgba(15,39,66,.06); }
+    h2 { margin:0 0 14px; color:var(--navy); font-size:1.45rem; }
+    h3 { margin-bottom:4px; }
+    p { margin:8px 0; }
+    ul { margin:10px 0 0; padding-left:21px; }
+    li { margin:6px 0; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+    .tag-list { display:flex; flex-wrap:wrap; gap:9px; padding:0; list-style:none; }
+    .tag-list li { margin:0; padding:6px 10px; border-radius:999px; background:#eaf3fa; color:#153e5c; font-size:.93rem; }
+    .meta { color:var(--muted); }
+    footer { padding:24px 0; color:#dce8f2; background:var(--navy); }
+    @media (max-width:700px) { .grid { grid-template-columns:1fr; } section { padding:22px; } }
   </style>
 </head>
-<body id="top">
+<body>
+  <header>
+    <div>
+      <h1>Ashley “Patience” Hopkins</h1>
+      <p><strong>Cloud & Network Engineering Student</strong></p>
+      <p class="credentials">CompTIA A+ · CompTIA Network+ · LPI Linux Essentials · ITIL 4 Foundation</p>
+      <nav aria-label="Portfolio navigation">
+        <a class="button" href="#projects">View project</a>
+        <a class="button secondary" href="mailto:ahopki29@wgu.edu">Email me</a>
+        <a class="button secondary" href="https://www.linkedin.com/in/patience-hopkins-432244329/">LinkedIn</a>
+      </nav>
+    </div>
+  </header>
 
-  <!-- dark mode toggle -->
-  <label class="switch">
-    <input type="checkbox" id="darkModeToggle">
-    <span class="slider round"></span>
-    <span id="modeLabel">🌞 Light Mode</span>
-  </label>
-
-  <!-- header -->
-<header style="padding: 50px 20px 60px;">
-  <h1>Ashley "Patience" Hopkins</h1>
-  <p>Future Network Engineer</p>
-  <p style="font-size: 1rem;">Night Owl 🦉</p>
-</header>
-
-  <!-- main content -->
   <main>
-    <!-- image and summary -->
-    <section class="section-box" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 40px;">
-      <img src="images/waterfall-profile.jpeg" width="300"
-           style="border: 3px solid #2c3e50; border-radius: 15px; box-shadow: 0px 4px 20px rgba(0,0,0,0.2);"
-           alt="Ashley sitting at a waterfall">
-
-      <div style="max-width: 480px;">
-        <h2 style="margin-top: 0;">Professional Summary</h2>
-        <p>
-         As an aspiring Network Engineer with hands-on experience configuring routers, switches, and firewalls in home lab environments, I bring a strong foundation in Linux administration and system troubleshooting. Currently pursuing my Bachelor's in Network Engineering and Security at WGU, I combine technical knowledge with a passion for building secure, reliable networks and solving <em>complex technical challenges</em>. My methodical approach and attention to detail make me well-suited for roles requiring both technical expertise and creative problem-solving.
-       </p>
-      </div>
+    <section>
+      <h2>Professional Profile</h2>
+      <p>Cloud and network engineering student with hands-on lab experience in TCP/IP networking, routing, switching, Linux administration, virtualization, and technical troubleshooting. CompTIA A+, Network+, LPI Linux Essentials, and ITIL 4 Foundation certified. Known for methodical problem-solving, careful documentation, and persistence when diagnosing unfamiliar systems. Seeking an entry-level NOC, network support, systems administration, cloud support, or technical support role.</p>
     </section>
 
-    <!-- horizontal rule -->
-    <hr style="max-width: 800px; margin: 30px auto; border: 0; height: 2px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(44, 62, 80, 0.75), rgba(0, 0, 0, 0));">
+    <div class="grid">
+      <section>
+        <h2>Technical Skills</h2>
+        <ul>
+          <li><strong>Networking:</strong> TCP/IP, IPv4, DNS, DHCP, NAT, subnetting, VLANs, routing, switching</li>
+          <li><strong>Systems:</strong> Linux, Windows, user and permission management, file systems, service management</li>
+          <li><strong>Troubleshooting:</strong> Hardware, operating systems, network connectivity, logs, packet analysis</li>
+          <li><strong>Tools:</strong> Cisco Packet Tracer, Wireshark, Bash, Git, GitHub, Docker fundamentals, NGINX</li>
+          <li><strong>Web:</strong> HTML, CSS, JavaScript fundamentals</li>
+        </ul>
+      </section>
 
-   <!-- technical skills -->
-<section class="section-box" id="skills" style="text-align: center;">
-  <h2>Technical Skills</h2>
-  <ul style="display: inline-block; text-align: left; list-style-type: none; padding-left: 0; max-width: 80%; margin: 0 auto;">
-    <li><strong>Networking:</strong> TCP/IP, DNS, DHCP, NAT, subnetting, VLANs, routing & switching, Cisco Packet Tracer, Wireshark</li>
-    <li><strong>Systems Administration:</strong> Linux (Ubuntu/Kali), user management, permissions, file systems, Windows troubleshooting, Bash scripting</li>
-    <li><strong>Web & Tools:</strong> HTML, CSS, JavaScript, Docker (basic), NGINX, web development fundamentals, self-hosted services</li>
-    <li><strong>Technical Support:</strong> PC hardware repair, OS & network troubleshooting, malware/firewall awareness</li>
-    <li><strong>Soft Skills:</strong> Fast learner, hands-on, strong troubleshooting, documentation, self-motivated</li>
-  </ul>
-</section>
+      <section>
+        <h2>Education & Certifications</h2>
+        <p><strong>Western Governors University</strong><br>B.S. Cloud and Network Engineering — AWS Track<br><span class="meta">In progress</span></p>
+        <ul>
+          <li>CompTIA Network+</li>
+          <li>CompTIA A+</li>
+          <li>LPI Linux Essentials</li>
+          <li>ITIL 4 Foundation</li>
+          <li>CompTIA IT Fundamentals</li>
+        </ul>
+      </section>
+    </div>
 
-<!-- education -->
-<section class="section-box" id="education" style="text-align: center;">
-  <h2>Education</h2>
-  <ul style="display: inline-block; text-align: left; list-style-type: none; padding-left: 0; max-width: 80%; margin: 0 auto;">
-    <li style="margin-bottom: 20px;">
-      <strong>Western Governors University</strong><br>
-      Bachelor of Science in Network Engineering and Security<br>
-      Expected Graduation: May 2026<br>
-      Relevant Coursework: Networking, Linux, Cybersecurity, TCP/IP, Troubleshooting
-    </li>
-    <li>
-      <strong>Fairview High School</strong><br>
-      Advanced Diploma, Class of 2006<br>
-      Focus: Web Development
-    </li>
-  </ul>
-</section>
-
-<!-- certifications -->
-<section class="section-box" id="certifications" style="text-align: center;">
-  <h2>Certifications</h2>
-  <ul style="display: inline-block; text-align: left; list-style-type: none; padding-left: 0; max-width: 80%; margin: 0 auto;">
-    <li>CompTIA IT Fundamentals</li>
-    <li>CompTIA A+</li>
-    <li>Linux Essentials</li>
-    <li>ITIL 4 Foundation</li>
-  </ul>
-</section>
-
-  
-    <!-- experience table -->
-    <article class="section-box">
-      <table class="experience-table">
-        <caption>Professional Experience Summary</caption>
-        <tr>
-          <th>Field</th>
-          <th>Years</th>
-          <th>Expertise Level</th>
-          <th>Key Skills</th>
-        </tr>
-        <tr>
-          <td>Web Design</td>
-          <td>20</td>
-          <td>Expert</td>
-          <td>HTML, CSS, JavaScript, <em>responsive design</em></td>
-        </tr>
-        <tr>
-          <td>Networking</td>
-          <td>2</td>
-          <td>Intermediate</td>
-          <td>TCP/IP, routing, switching, VLANs</td>
-        </tr>
-        <tr>
-          <td>Linux Administration</td>
-          <td>20</td>
-          <td>Intermediate</td>
-          <td>System configuration, user management, basic security</td>
-        </tr>
-      </table>
-    </article>
-
- <section class="section-box" id="projects">
-  <h2>Projects</h2>
-
-  <div class="project">
-    <div class="project-content">
-      <h3>Tor Middle Relay Deployment (CacheMeOutside)</h3>
-      <hr style="width: 60px; margin: 10px auto; border: 2px solid #4CAF50;">
-      <p><strong>Kali Linux VM | Networking | Cybersecurity | Linux Administration</strong></p>
-
+    <section id="projects">
+      <h2>Featured Project</h2>
+      <h3>Tor Middle Relay Deployment</h3>
+      <p class="meta">Linux · Networking · Service Administration · Traffic Analysis</p>
       <ul>
-  <li>Deployed and configured a Tor middle relay supporting decentralized network infrastructure</li>
-  <li>Configured relay bandwidth, identity, and port settings using torrc configuration</li>
-  <li>Monitored relay performance using system logs and network traffic analysis</li>
-  <li>Applied TCP/IP concepts including port forwarding and traffic flow validation</li>
-  <li>Performed Linux system administration and service management in a virtualized environment</li>
-</ul>
+        <li>Deployed and configured a non-exit Tor middle relay in a Kali Linux virtual machine.</li>
+        <li>Configured relay identity, bandwidth, and port settings through the <code>torrc</code> configuration file.</li>
+        <li>Used system logs and network traffic analysis to monitor service operation and validate traffic flow.</li>
+        <li>Applied TCP/IP, port forwarding, Linux service management, and virtualization concepts.</li>
+        <li>Documented the configuration and troubleshooting process for repeatability.</li>
+      </ul>
+      <p><a class="button" href="https://github.com/PatienceEnoch/TOR_Relay">View project documentation</a></p>
+    </section>
 
-      <p>
-  <a href="https://github.com/PatienceEnoch/TOR_Relay" target="_blank" class="nav-button">View Project</a>
-  <a href="https://github.com/PatienceEnoch/TOR_Relay#readme" target="_blank" class="nav-button">Documentation</a>
-</p>
+    <section>
+      <h2>Currently Building</h2>
+      <ul class="tag-list">
+        <li>AWS cloud fundamentals</li>
+        <li>Cloud networking</li>
+        <li>Linux administration</li>
+        <li>Network troubleshooting</li>
+        <li>Technical documentation</li>
+      </ul>
+    </section>
 
-    <section class="section-box" style="text-align: center;">
-  <h2>Additional Documents</h2>
-  <a href="coverletter.html" class="nav-button">View My Cover Letter</a>
-  <a href="career-goals.html" class="nav-button">View My Career Goals</a>
-</section>
-    
-   <!-- thank you -->
-<section class="section-box" style="text-align: center;">
-  <p style="font-size: 1.1rem;">
-    <mark>Thank you for taking time to read my resume.</mark>
-  </p>
-</section>
-
-   <!-- contact -->
-    <section class="section-box" id="contact" style="text-align: center;">
+    <section>
       <h2>Contact</h2>
-      <p><strong>Email:</strong> <a href="mailto:ahopki29@wgu.edu">ahopki29@wgu.edu</a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/patience-hopkins-432244329/" target="_blank">linkedin.com/in/patience-hopkins</a></p>
-      <p style="margin-top: 1.5rem;">
-        <a href="#top" class="nav-button">↑ Back to Top</a>
-      </p>
+      <p><a href="mailto:ahopki29@wgu.edu">ahopki29@wgu.edu</a> · <a href="https://www.linkedin.com/in/patience-hopkins-432244329/">LinkedIn</a> · <a href="https://github.com/PatienceEnoch">GitHub</a></p>
     </section>
   </main>
 
-  <nav style="display: none;">
-    <ul>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#education">Education</a></li>
-    </ul>
-  </nav>
-
-<!-- footer with date -->
-<div style="text-align: center; margin-top: 30px; margin-bottom: 10px;">
-  <div id="currentDate" style="font-style: italic; color: #666;"></div>
-</div>
-
-  <footer class="professional-footer">
-    <div class="footer-content">
-      <p class="copyright">© 2025 Ashley Hopkins | Network Engineering & Security Professional</p>
-    </div>
-  </footer>
-
-  <!-- javascript -->
-  <script>
-    window.onload = function () {
-      // dark mode toggle
-      const toggle = document.getElementById("darkModeToggle");
-      const label = document.getElementById("modeLabel");
-      
-      // Check if user has a saved preference
-      const savedDarkMode = localStorage.getItem('darkMode');
-      
-      // Apply dark mode based on saved preference or system preference
-      if (savedDarkMode === 'true' || 
-          (savedDarkMode === null && 
-           window.matchMedia && 
-           window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        // Enable dark mode
-        document.body.classList.add('dark-mode');
-        toggle.checked = true;
-        label.textContent = "🌙 Dark Mode";
-      } else {
-        // Enable light mode
-        document.body.classList.remove('dark-mode');
-        toggle.checked = false;
-        label.textContent = "🌞 Light Mode";
-      }
-      
-      // Add event listener for toggle changes
-      toggle.addEventListener("change", function() {
-        if (this.checked) {
-          // Switch to dark mode
-          document.body.classList.add('dark-mode');
-          label.textContent = "🌙 Dark Mode";
-          localStorage.setItem('darkMode', 'true');
-        } else {
-          // Switch to light mode
-          document.body.classList.remove('dark-mode');
-          label.textContent = "🌞 Light Mode";
-          localStorage.setItem('darkMode', 'false');
-        }
-      });
-
-      // Display current date
-      const dateElement = document.getElementById("currentDate");
-      const currentDate = new Date();
-      dateElement.textContent = "Last updated: " + currentDate.toLocaleDateString();
-      
-      // Console log for JavaScript
-      console.log("Resume page loaded successfully on " + currentDate);
-    };
-  </script>
-
+  <footer><div>© 2026 Ashley “Patience” Hopkins</div></footer>
 </body>
 </html>
-
-
