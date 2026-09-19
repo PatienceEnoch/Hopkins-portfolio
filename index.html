@@ -3,71 +3,279 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio of Patience Hopkins, a cloud and network engineering student with CompTIA A+, Network+, Linux Essentials, and ITIL 4 Foundation certifications.">
+  <meta name="description" content="Portfolio of Ashley 'Patience' Hopkins, a cloud and network engineering student focused on networking, AWS, Linux, automation, observability, and security-aware infrastructure.">
   <title>Patience Hopkins | Cloud & Network Engineering</title>
   <style>
-    :root { --navy:#0f2742; --blue:#1769aa; --ink:#172231; --muted:#52606d; --paper:#fff; --bg:#f4f7fa; --line:#d9e2ec; }
+    :root {
+      --navy:#0b1f33;
+      --navy-2:#123a59;
+      --blue:#1e6f9f;
+      --ink:#17222d;
+      --muted:#5b6875;
+      --paper:#ffffff;
+      --bg:#eef3f6;
+      --line:#d8e1e7;
+      --soft:#e9f1f6;
+    }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
-    body { margin:0; font-family:Inter,Segoe UI,Arial,sans-serif; line-height:1.6; color:var(--ink); background:var(--bg); }
+    body {
+      margin:0;
+      font-family:Inter, "Segoe UI", Arial, sans-serif;
+      line-height:1.65;
+      color:var(--ink);
+      background:var(--bg);
+    }
     a { color:var(--blue); }
-    header { padding:64px 24px 52px; color:#fff; background:linear-gradient(135deg,#0b1f35,#174b75); }
-    header div, main, footer div { width:min(960px,calc(100% - 40px)); margin:auto; }
-    h1 { margin:0 0 8px; font-size:clamp(2.1rem,6vw,3.6rem); line-height:1.1; }
-    header p { max-width:760px; margin:8px 0; font-size:1.08rem; }
-    .credentials { color:#d8eaf8; }
-    nav { margin-top:26px; display:flex; flex-wrap:wrap; gap:12px; }
-    .button { display:inline-block; padding:10px 16px; border-radius:7px; color:#fff; background:var(--blue); text-decoration:none; font-weight:700; }
-    .button.secondary { background:transparent; border:1px solid #a9c8df; }
-    main { padding:28px 0 56px; }
-    section { margin:20px 0; padding:28px; background:var(--paper); border:1px solid var(--line); border-radius:12px; box-shadow:0 6px 20px rgba(15,39,66,.06); }
-    h2 { margin:0 0 14px; color:var(--navy); font-size:1.45rem; }
-    h3 { margin-bottom:4px; }
+    header {
+      padding:72px 24px 58px;
+      color:#fff;
+      background:linear-gradient(135deg,var(--navy),var(--navy-2));
+    }
+    header div, main, footer div {
+      width:min(1040px,calc(100% - 40px));
+      margin:auto;
+    }
+    .eyebrow {
+      margin:0 0 10px;
+      font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      font-size:.78rem;
+      color:#b9d7e8;
+    }
+    h1 {
+      margin:0 0 12px;
+      font-size:clamp(2.3rem,6vw,4rem);
+      line-height:1.05;
+    }
+    .lede {
+      max-width:780px;
+      margin:0;
+      font-size:1.18rem;
+      color:#e3eef5;
+    }
+    .credentials {
+      margin-top:14px;
+      color:#bed4e2;
+      font-size:.98rem;
+    }
+    nav {
+      margin-top:28px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+    .button {
+      display:inline-block;
+      padding:10px 16px;
+      border-radius:8px;
+      color:#fff;
+      background:var(--blue);
+      text-decoration:none;
+      font-weight:700;
+    }
+    .button.secondary {
+      background:transparent;
+      border:1px solid #9fc0d4;
+    }
+    main { padding:30px 0 60px; }
+    section {
+      margin:22px 0;
+      padding:30px;
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:14px;
+      box-shadow:0 8px 24px rgba(15,39,66,.05);
+    }
+    h2 {
+      margin:0 0 14px;
+      color:var(--navy);
+      font-size:1.55rem;
+    }
+    h3 {
+      margin:0 0 6px;
+      color:var(--navy);
+      font-size:1.2rem;
+    }
     p { margin:8px 0; }
     ul { margin:10px 0 0; padding-left:21px; }
     li { margin:6px 0; }
-    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
-    .tag-list { display:flex; flex-wrap:wrap; gap:9px; padding:0; list-style:none; }
-    .tag-list li { margin:0; padding:6px 10px; border-radius:999px; background:#eaf3fa; color:#153e5c; font-size:.93rem; }
-    .meta { color:var(--muted); }
-    footer { padding:24px 0; color:#dce8f2; background:var(--navy); }
-    @media (max-width:700px) { .grid { grid-template-columns:1fr; } section { padding:22px; } }
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:20px;
+    }
+    .projects {
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:18px;
+      margin-top:18px;
+    }
+    .project {
+      padding:22px;
+      border:1px solid var(--line);
+      border-radius:12px;
+      background:#fbfdfe;
+    }
+    .project.featured {
+      grid-column:1 / -1;
+      background:var(--soft);
+      border-color:#bfd3df;
+    }
+    .meta {
+      color:var(--muted);
+      font-size:.94rem;
+    }
+    .tag-list {
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px;
+      padding:0;
+      list-style:none;
+    }
+    .tag-list li {
+      margin:0;
+      padding:6px 10px;
+      border-radius:999px;
+      background:var(--soft);
+      color:#173d58;
+      font-size:.9rem;
+    }
+    .link-row {
+      margin-top:16px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+    }
+    .plain-link {
+      font-weight:700;
+      text-decoration:none;
+    }
+    blockquote {
+      margin:18px 0 0;
+      padding:14px 18px;
+      border-left:4px solid var(--blue);
+      background:#f7fafc;
+      color:#334653;
+    }
+    footer {
+      padding:26px 0;
+      color:#dce8f2;
+      background:var(--navy);
+    }
+    footer a { color:#dce8f2; }
+    @media (max-width:760px) {
+      .grid, .projects { grid-template-columns:1fr; }
+      .project.featured { grid-column:auto; }
+      section { padding:22px; }
+    }
   </style>
 </head>
 <body>
   <header>
     <div>
+      <p class="eyebrow">Cloud · Networking · Linux · Automation</p>
       <h1>Ashley “Patience” Hopkins</h1>
-      <p><strong>Cloud & Network Engineering Student</strong></p>
-      <p class="credentials">CompTIA A+ · CompTIA Network+ · LPI Linux Essentials · ITIL 4 Foundation</p>
+      <p class="lede">I build networks, break them on purpose, and follow the evidence until I understand what happened.</p>
+      <p class="credentials">WGU B.S. Cloud & Network Engineering — AWS Track · CompTIA A+ · CompTIA Network+ · LPI Linux Essentials · ITIL 4 Foundation</p>
       <nav aria-label="Portfolio navigation">
-        <a class="button" href="#projects">View project</a>
-        <a class="button secondary" href="mailto:ahopki29@wgu.edu">Email me</a>
-        <a class="button secondary" href="https://www.linkedin.com/in/patience-hopkins-432244329/">LinkedIn</a>
+        <a class="button" href="#projects">View my work</a>
+        <a class="button secondary" href="https://github.com/PatienceEnoch">GitHub</a>
+        <a class="button secondary" href="https://www.linkedin.com/in/ashley-hopkins-432244329/">LinkedIn</a>
       </nav>
     </div>
   </header>
 
   <main>
     <section>
-      <h2>Professional Profile</h2>
-      <p>Cloud and network engineering student with hands-on lab experience in TCP/IP networking, routing, switching, Linux administration, virtualization, and technical troubleshooting. CompTIA A+, Network+, LPI Linux Essentials, and ITIL 4 Foundation certified. Known for methodical problem-solving, careful documentation, and persistence when diagnosing unfamiliar systems. Seeking an entry-level NOC, network support, systems administration, cloud support, or technical support role.</p>
+      <p class="eyebrow">Profile</p>
+      <h2>Security-aware cloud and network engineering</h2>
+      <p>I am a Cloud and Network Engineering student focused on routing, Linux, AWS, network observability, automation, and troubleshooting. The projects that teach me the most are the ones where I can build a system, introduce a controlled failure, inspect the resulting state, and prove why it behaved the way it did.</p>
+      <p>I am working toward network and cloud engineering roles where I can help build reliable infrastructure and troubleshoot across layers instead of treating networking, systems, cloud, and security as separate problems.</p>
+    </section>
+
+    <section id="projects">
+      <p class="eyebrow">Selected work</p>
+      <h2>Projects I can explain from the inside out</h2>
+
+      <div class="projects">
+        <article class="project featured">
+          <h3>Network Flight Recorder</h3>
+          <p class="meta">Python · Linux · Docker · Terraform · AWS · S3 · CloudWatch · GitHub Actions</p>
+          <p>A local-first network troubleshooting and observability system built around one question: <strong>what changed?</strong></p>
+          <p>It captures known-good network state, detects meaningful changes, correlates evidence into likely root causes, tracks incidents through recovery, and preserves diagnostic evidence locally even when cloud connectivity is unavailable.</p>
+          <ul>
+            <li>Reproducible Docker failure injection</li>
+            <li>Evidence-backed diagnosis and incident lifecycle tracking</li>
+            <li>Terraform-managed S3 and CloudWatch operations layer</li>
+            <li>Deterministic redaction for sensitive network evidence</li>
+            <li>Approval-gated remediation, verification, and rollback</li>
+            <li>pytest, Ruff, dependency auditing, and Terraform validation in CI</li>
+          </ul>
+          <div class="link-row">
+            <a class="plain-link" href="https://github.com/PatienceEnoch/network-flight-recorder">Project repository →</a>
+            <a class="plain-link" href="https://github.com/PatienceEnoch/Cloud_Network_Architecture_Journal/blob/main/cloud/network-flight-recorder-architecture.md">Architecture notes →</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <h3>Mini Internet</h3>
+          <p class="meta">BGP · FRRouting · Docker Compose · Linux · IPv4 · Failover testing</p>
+          <p>Three routers, three private autonomous systems, and a link I can deliberately turn off.</p>
+          <p>I built the lab to watch BGP choose an alternate path during failure. I then compared the default 60/180-second BGP timers with 3/9-second timers and documented the difference between having a backup route and actually converging quickly enough to use it.</p>
+          <div class="link-row">
+            <a class="plain-link" href="https://github.com/PatienceEnoch/mini-internet">Project repository →</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <h3>Shipment Tracker</h3>
+          <p class="meta">Python · FastAPI · SQLAlchemy · SQLite · Email automation · GitHub Actions</p>
+          <p>A workflow application built around a real operational problem: determining whether a sales order received a shipping label and whether the carrier actually acquired the package within the expected time window.</p>
+          <p>The project includes persistent order state, overdue alerts, deduplication, API endpoints, a browser dashboard, and automated tests.</p>
+          <div class="link-row">
+            <a class="plain-link" href="https://github.com/PatienceEnoch/shipment-tracker">Project repository →</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <h3>Ubuntu Virtual Network Lab</h3>
+          <p class="meta">Linux · Routing · NAT · DNS · SSH · nftables · tcpdump</p>
+          <p>A two-system virtual networking lab I use to work through packet flow, forwarding, name resolution, remote access, services, and packet capture from the operating-system level.</p>
+          <div class="link-row">
+            <a class="plain-link" href="https://github.com/PatienceEnoch/Ubuntu-virtual-network-lab">Project repository →</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <h3>Tor Middle Relay</h3>
+          <p class="meta">Linux · TCP/IP · Services · Logging · Traffic validation</p>
+          <p>A documented non-exit Tor middle-relay deployment used to practice Linux service administration, networking, port configuration, logging, and traffic validation.</p>
+          <div class="link-row">
+            <a class="plain-link" href="https://github.com/PatienceEnoch/TOR_Relay">Project repository →</a>
+          </div>
+        </article>
+      </div>
     </section>
 
     <div class="grid">
       <section>
-        <h2>Technical Skills</h2>
+        <p class="eyebrow">Toolkit</p>
+        <h2>What I work with</h2>
         <ul>
-          <li><strong>Networking:</strong> TCP/IP, IPv4, DNS, DHCP, NAT, subnetting, VLANs, routing, switching</li>
-          <li><strong>Systems:</strong> Linux, Windows, user and permission management, file systems, service management</li>
-          <li><strong>Troubleshooting:</strong> Hardware, operating systems, network connectivity, logs, packet analysis</li>
-          <li><strong>Tools:</strong> Cisco Packet Tracer, Wireshark, Bash, Git, GitHub, Docker fundamentals, NGINX</li>
-          <li><strong>Web:</strong> HTML, CSS, JavaScript fundamentals</li>
+          <li><strong>Networking:</strong> TCP/IP, IPv4, subnetting, DNS, DHCP, NAT, VLANs, routing, BGP, firewalls, VPN concepts, packet analysis</li>
+          <li><strong>Linux:</strong> Ubuntu, systemd, Bash, SSH, services, permissions, logs, network troubleshooting</li>
+          <li><strong>Cloud & IaC:</strong> AWS, VPC networking, S3, CloudWatch, IAM, Terraform</li>
+          <li><strong>Automation:</strong> Python, FastAPI, SQLAlchemy, pytest, Ruff, GitHub Actions, JSON, CLI tooling</li>
+          <li><strong>Containers:</strong> Docker, Docker Compose, reproducible lab environments</li>
+          <li><strong>Security:</strong> access control, evidence protection, dependency auditing, secure-by-default design</li>
         </ul>
       </section>
 
       <section>
-        <h2>Education & Certifications</h2>
+        <p class="eyebrow">Education</p>
+        <h2>Education & certifications</h2>
         <p><strong>Western Governors University</strong><br>B.S. Cloud and Network Engineering — AWS Track<br><span class="meta">In progress</span></p>
         <ul>
           <li>CompTIA Network+</li>
@@ -79,37 +287,45 @@
       </section>
     </div>
 
-    <section id="projects">
-      <h2>Featured Project</h2>
-      <h3>Tor Middle Relay Deployment</h3>
-      <p class="meta">Linux · Networking · Service Administration · Traffic Analysis</p>
-      <ul>
-        <li>Deployed and configured a non-exit Tor middle relay in a Kali Linux virtual machine.</li>
-        <li>Configured relay identity, bandwidth, and port settings through the <code>torrc</code> configuration file.</li>
-        <li>Used system logs and network traffic analysis to monitor service operation and validate traffic flow.</li>
-        <li>Applied TCP/IP, port forwarding, Linux service management, and virtualization concepts.</li>
-        <li>Documented the configuration and troubleshooting process for repeatability.</li>
-      </ul>
-      <p><a class="button" href="https://github.com/PatienceEnoch/TOR_Relay">View project documentation</a></p>
+    <section>
+      <p class="eyebrow">Technical journal</p>
+      <h2>Cloud Network Architecture Journal</h2>
+      <p>I keep a separate architecture journal for the lessons behind the projects: BGP path selection and convergence, failure domains, local-first observability, guarded remediation, distributed systems, cloud design, and the reasoning I want to carry into future infrastructure work.</p>
+      <blockquote>A backup path is architecture. Recovery time is behavior.</blockquote>
+      <div class="link-row">
+        <a class="button" href="https://github.com/PatienceEnoch/Cloud_Network_Architecture_Journal">Read the journal</a>
+      </div>
     </section>
 
     <section>
-      <h2>Currently Building</h2>
+      <p class="eyebrow">Next direction</p>
+      <h2>What I am building toward</h2>
+      <p>My next networking work is moving toward hybrid cloud architecture: connecting a simulated on-premises environment to AWS, then expanding into Transit Gateway, segmented VPCs, infrastructure as code, and network observability.</p>
       <ul class="tag-list">
-        <li>AWS cloud fundamentals</li>
-        <li>Cloud networking</li>
-        <li>Linux administration</li>
-        <li>Network troubleshooting</li>
-        <li>Technical documentation</li>
+        <li>CCNA concepts</li>
+        <li>BGP & routing behavior</li>
+        <li>AWS networking</li>
+        <li>Hybrid connectivity</li>
+        <li>Terraform</li>
+        <li>Python automation</li>
+        <li>Network observability</li>
+        <li>Security-aware design</li>
       </ul>
     </section>
 
     <section>
-      <h2>Contact</h2>
-      <p><a href="mailto:ahopki29@wgu.edu">ahopki29@wgu.edu</a> · <a href="https://www.linkedin.com/in/patience-hopkins-432244329/">LinkedIn</a> · <a href="https://github.com/PatienceEnoch">GitHub</a></p>
+      <p class="eyebrow">Contact</p>
+      <h2>Find me</h2>
+      <p>
+        <a href="mailto:ahopki29@wgu.edu">ahopki29@wgu.edu</a> ·
+        <a href="https://www.linkedin.com/in/ashley-hopkins-432244329/">LinkedIn</a> ·
+        <a href="https://github.com/PatienceEnoch">GitHub</a>
+      </p>
     </section>
   </main>
 
-  <footer><div>© 2026 Ashley “Patience” Hopkins</div></footer>
+  <footer>
+    <div>© 2026 Ashley “Patience” Hopkins</div>
+  </footer>
 </body>
 </html>
