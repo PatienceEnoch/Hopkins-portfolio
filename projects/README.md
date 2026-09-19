@@ -1,122 +1,35 @@
-# 🟣 Tor Middle Relay Deployment  
-### A Hands-On Networking & Security Engineering Project  
-**Project Name:** CacheMeOutside (Middle Relay)  
-**Platform:** Kali Linux VM  
-**Category:** Network Engineering • Cybersecurity • Linux Administration
+# Project Index
 
----
+This folder originally centered on my Tor relay project. My portfolio has grown since then, so the current project work lives in its own repositories.
 
-## 📌 Overview
-This project involved deploying and operating a Tor middle relay as part of my hands-on networking and security engineering practice.  
-A Tor relay is a node that helps route encrypted traffic through the Tor network, enabling multi-hop, privacy-preserving communications.
+## Current Projects
 
-Running a middle relay (not an exit) is:
-- safe  
-- legal  
-- an excellent networking lab  
-- a real-world example of distributed routing + uptime management  
+### [Network Flight Recorder](https://github.com/PatienceEnoch/network-flight-recorder)
 
-This project strengthened my understanding of routing, encryption circuits, Linux services, firewalls, public keys, and real-time network monitoring.
+Local-first Linux network observability and troubleshooting with Python, Docker, Terraform, AWS, CloudWatch, S3, CI, guarded remediation, verification, and rollback.
 
----
+### [Mini Internet](https://github.com/PatienceEnoch/mini-internet)
 
-## 🎯 Objectives
-- Deploy a fully functioning Tor middle relay  
-- Learn how Tor builds encrypted multi-hop circuits  
-- Configure and manage a public-facing network service  
-- Work with systemd, logs, keys, and reachability testing  
-- Monitor performance and health through Tor Metrics  
+Three FRRouting routers in three private autonomous systems used to study BGP path selection, failover, convergence, route filtering, and timer behavior.
 
----
+### [Shipment Tracker](https://github.com/PatienceEnoch/shipment-tracker)
 
-## 🛠 Technologies & Skills Used
-- Linux Administration (Kali Linux)  
-- Networking: ORPorts, firewalls, reachability checks  
-- Systemd (systemctl, service management)  
-- Encryption & Key Management (/var/lib/tor/keys/)  
-- Routing & Privacy Engineering Concepts  
-- Distributed Systems Monitoring  
-- Public Relay Identity (Fingerprint)  
+Python/FastAPI workflow application for tracking sales orders through label creation and carrier acquisition, with alerts, persistent state, API endpoints, a browser dashboard, and automated tests.
 
----
+### [Ubuntu Virtual Network Lab](https://github.com/PatienceEnoch/Ubuntu-virtual-network-lab)
 
-## 📡 Relay Deployment Summary
+Two Ubuntu systems used to practice routing, NAT, DNS, SSH, nftables, Apache, and packet inspection with tcpdump.
 
-### Relay Nickname  
-CacheMeOutside
+### [Tor Middle Relay](https://github.com/PatienceEnoch/TOR_Relay)
 
-### Fingerprint  
-6C107E82F0BA26F2BEB3F5745BEC7F033ABDCA94
+A documented non-exit Tor relay deployment focused on Linux services, TCP/IP, logging, port configuration, and traffic validation.
 
-### ORPort & Reachability  
-Relay successfully reached by directory authorities via:  
-<REDACTED_IP>:9001
+### [IDOR Learning Project](https://github.com/PatienceEnoch/IDOR--Insecure_Direct_Object_Reference_Learning-Project)
 
-### Relay Type  
-✔ Middle Relay  
-✘ Exit Relay (safe setup)
+Authorized security lab focused on broken access control and insecure direct object references.
 
-### Initial Flags Received
-- Running  
-- Valid  
-- V2Dir  
+## Architecture Notes
 
----
+The reasoning and lessons behind these projects live in my [Cloud Network Architecture Journal](https://github.com/PatienceEnoch/Cloud_Network_Architecture_Journal).
 
-## 🧩 Configuration (torrc)
-Below is a sanitized version of the relay’s torrc configuration:
-
-```
-Nickname CacheMeOutside
-ORPort 9001
-DirPort 9030
-SocksPort 0
-ExitRelay 0
-ExitPolicy reject *:*
-ContactInfo <email redacted>
-Log notice file /var/log/tor/notices.log
-```
-
----
-
-## 🔍 Monitoring & Metrics
-Relay was verified using Tor Metrics:  
-- Uptime  
-- Flags  
-- Reachability  
-- Advertised bandwidth  
-- Consensus weight  
-
-All indicators showed a healthy, functioning middle relay.
-
----
-
-## 💡 What I Learned
-- How Tor constructs anonymized circuits  
-- Why multi-hop encrypted routing requires public relays  
-- Managing long-running Linux services  
-- Reading logs and diagnosing reachability issues  
-- Core Linux topics: permissions, ownership, system services  
-- The structure of the Tor directory authority system  
-- How uptime affects relay selection weight  
-
-This project deepened my understanding of network infrastructure, anonymity networks, distributed systems, and encrypted routing.
-
----
-
-## 🚀 Next Steps
-- Continue uptime to earn additional relay flags  
-- Automate deployment with Ansible or Terraform (advanced)  
-- Deploy a second relay in my lab network  
-- Set up Tor relay dashboards or Prometheus metrics  
-
----
-
-## 📁 Screenshots  
-(Add redacted screenshot here once uploaded)
-
----
-
-## 📎 Final Thoughts
-Running a Tor middle relay was an excellent way to apply cloud/network engineering concepts in a real-world environment.  
-This project strengthened my skills in Linux, routing, privacy engineering, and service reliability.
+That journal covers topics such as BGP convergence, failure domains, observability, guarded remediation, distributed systems, and cloud architecture.
