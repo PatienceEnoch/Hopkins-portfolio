@@ -215,7 +215,7 @@
           </ul>
           <div class="link-row">
             <a class="plain-link" href="https://github.com/PatienceEnoch/network-flight-recorder">Project repository →</a>
-            <a class="plain-link" href="https://github.com/PatienceEnoch/Cloud_Network_Architecture_Journal/blob/main/cloud/network-flight-recorder-architecture.md">Architecture notes →</a>
+            <a class="plain-link" href="https://github.com/PatienceEnoch/Cloud-Network-Architecture-Journal/blob/main/cloud/network-flight-recorder-architecture.md">Architecture notes →</a>
           </div>
         </article>
 
@@ -240,10 +240,12 @@
         </article>
 
         <article class="project">
-          <h3>Ubuntu Virtual Network Lab</h3>
-          <p class="meta">Linux · Routing · NAT · DNS · SSH · nftables · tcpdump</p>
-          <p>A two-system virtual networking lab I use to work through packet flow, forwarding, name resolution, remote access, services, and packet capture from the operating-system level.</p>
+          <h3>Site-to-Site IPsec VPN Lab</h3>
+          <p class="meta">Linux · strongSwan · IKEv2 · IPsec · XFRM · nftables · tcpdump · systemd</p>
+          <p>A routed VPN lab connecting a local Ubuntu network to a simulated cloud network through two Linux gateways. I traced the packet path across routing, NAT, IPsec policy, encryption, forwarding, ARP, and the return path instead of stopping at “the tunnel is up.”</p>
+          <p>The final build survives reboot on both gateways and passes end-to-end traffic from <code>10.10.10.10</code> to <code>10.20.0.10</code> with 0% packet loss.</p>
           <div class="link-row">
+            <a class="plain-link" href="https://github.com/PatienceEnoch/Ubuntu-virtual-network-lab/blob/main/docs/local-site-to-site-ipsec-validation.md">Validation notes →</a>
             <a class="plain-link" href="https://github.com/PatienceEnoch/Ubuntu-virtual-network-lab">Project repository →</a>
           </div>
         </article>
@@ -264,8 +266,8 @@
         <p class="eyebrow">Toolkit</p>
         <h2>What I work with</h2>
         <ul>
-          <li><strong>Networking:</strong> TCP/IP, IPv4, subnetting, DNS, DHCP, NAT, VLANs, routing, BGP, firewalls, VPN concepts, packet analysis</li>
-          <li><strong>Linux:</strong> Ubuntu, systemd, Bash, SSH, services, permissions, logs, network troubleshooting</li>
+          <li><strong>Networking:</strong> TCP/IP, IPv4, subnetting, DNS, DHCP, NAT, VLANs, routing, BGP, firewalls, IKEv2/IPsec, strongSwan, XFRM, packet analysis</li>
+          <li><strong>Linux:</strong> Ubuntu, systemd, Bash, SSH, services, permissions, logs, network namespaces, veth pairs, network troubleshooting</li>
           <li><strong>Cloud & IaC:</strong> AWS, VPC networking, S3, CloudWatch, IAM, Terraform</li>
           <li><strong>Automation:</strong> Python, FastAPI, SQLAlchemy, pytest, Ruff, GitHub Actions, JSON, CLI tooling</li>
           <li><strong>Containers:</strong> Docker, Docker Compose, reproducible lab environments</li>
@@ -293,7 +295,7 @@
       <p>I keep a separate architecture journal for the lessons behind the projects: BGP path selection and convergence, failure domains, local-first observability, guarded remediation, distributed systems, cloud design, and the reasoning I want to carry into future infrastructure work.</p>
       <blockquote>A backup path is architecture. Recovery time is behavior.</blockquote>
       <div class="link-row">
-        <a class="button" href="https://github.com/PatienceEnoch/Cloud_Network_Architecture_Journal">Read the journal</a>
+        <a class="button" href="https://github.com/PatienceEnoch/Cloud-Network-Architecture-Journal">Read the journal</a>
       </div>
     </section>
 
