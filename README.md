@@ -34,9 +34,11 @@ A Python/FastAPI workflow application that tracks whether a sales order receives
 
 It includes persistent state, overdue alerts, deduplication, API endpoints, a browser dashboard, and automated tests.
 
-### [Ubuntu Virtual Network Lab](https://github.com/PatienceEnoch/Ubuntu-virtual-network-lab)
+### [Site-to-Site IPsec VPN Lab](https://github.com/PatienceEnoch/Ubuntu-virtual-network-lab/blob/main/docs/local-site-to-site-ipsec-validation.md)
 
-A two-system Ubuntu lab covering static addressing, forwarding, NAT, DNS, SSH, Apache, nftables, and packet inspection with tcpdump.
+A routed Linux VPN lab connecting an Ubuntu client network to a simulated cloud network through strongSwan IKEv2/IPsec.
+
+I validated the complete path across routing, NAT exemption, XFRM policy/state, encryption, forwarding, ARP, tcpdump, return routing, network namespaces, and reboot persistence. The finished build passes end-to-end traffic from `10.10.10.10` to `10.20.0.10` with 0% packet loss after rebooting both gateway sides.
 
 ### [Tor Middle Relay](https://github.com/PatienceEnoch/TOR_Relay)
 
@@ -44,7 +46,7 @@ A documented non-exit Tor middle relay focused on Linux service administration, 
 
 ## Architecture Journal
 
-My [Cloud Network Architecture Journal](https://github.com/PatienceEnoch/Cloud_Network_Architecture_Journal) contains the engineering lessons behind the projects, including:
+My [Cloud Network Architecture Journal](https://github.com/PatienceEnoch/Cloud-Network-Architecture-Journal) contains the engineering lessons behind the projects, including:
 
 - BGP path selection and convergence
 - Failure domains
@@ -58,8 +60,8 @@ My [Cloud Network Architecture Journal](https://github.com/PatienceEnoch/Cloud_N
 
 ## Technical Skills
 
-- **Networking:** TCP/IP, IPv4, subnetting, DNS, DHCP, NAT, VLANs, routing, BGP, firewalls, VPN concepts, packet analysis
-- **Linux:** Ubuntu, systemd, Bash, SSH, services, permissions, logs, troubleshooting
+- **Networking:** TCP/IP, IPv4, subnetting, DNS, DHCP, NAT, VLANs, routing, BGP, firewalls, IKEv2/IPsec, strongSwan, XFRM, packet analysis
+- **Linux:** Ubuntu, systemd, Bash, SSH, services, permissions, logs, network namespaces, veth pairs, troubleshooting
 - **Cloud & Infrastructure:** AWS, VPC networking, S3, CloudWatch, IAM, Terraform
 - **Development & Automation:** Python, FastAPI, SQLAlchemy, pytest, Ruff, GitHub Actions, JSON, CLI tooling
 - **Containers:** Docker, Docker Compose
@@ -86,4 +88,4 @@ The next major architecture build is a simulated on-premises environment connect
 
 - [GitHub](https://github.com/PatienceEnoch)
 - [LinkedIn](https://www.linkedin.com/in/ashley-hopkins-432244329/)
-- [Cloud Network Architecture Journal](https://github.com/PatienceEnoch/Cloud_Network_Architecture_Journal)
+- [Cloud Network Architecture Journal](https://github.com/PatienceEnoch/Cloud-Network-Architecture-Journal)
