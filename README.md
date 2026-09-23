@@ -1,6 +1,6 @@
 # Ashley "Patience" Hopkins | Cloud & Network Engineering Portfolio
 
-I am a WGU Cloud and Network Engineering student on the AWS track, building toward security-aware network and cloud engineering roles.
+I am a WGU Cloud and Network Engineering student on the AWS track, building toward security aware network and cloud engineering roles.
 
 I learn best by building systems, breaking them in controlled ways, and tracing the evidence until I understand what actually happened.
 
@@ -8,25 +8,25 @@ I learn best by building systems, breaking them in controlled ways, and tracing 
 
 ### [Network Flight Recorder](https://github.com/PatienceEnoch/network-flight-recorder)
 
-A local-first Linux network troubleshooting and observability system that captures known-good state, detects meaningful changes, correlates evidence into likely root causes, tracks incidents through recovery, and preserves evidence even when cloud connectivity is unavailable.
+A local first Linux network troubleshooting and observability system that captures known good state, detects meaningful changes, correlates evidence into likely root causes, tracks incidents through recovery, and preserves evidence even when cloud connectivity is unavailable.
 
 Current architecture includes:
 
 - Python CLI and automated tests
-- Docker-based failure injection
-- Terraform-managed AWS infrastructure
+- Docker based failure injection
+- Terraform managed AWS infrastructure
 - Private S3 evidence storage
 - CloudWatch metrics, logs, and dashboarding
 - Deterministic evidence redaction
-- Approval-gated remediation
-- Post-change verification and rollback
+- Approval gated remediation
+- Post change verification and rollback
 - GitHub Actions validation
 
 ### [Mini Internet](https://github.com/PatienceEnoch/mini-internet)
 
-A three-router FRRouting lab using three private autonomous systems.
+A three router FRRouting lab using three private autonomous systems.
 
-I built it to observe BGP path selection and failover directly. The lab includes a controlled A-C link failure, an alternate route through B, and a timer comparison between default BGP behavior and shorter 3/9-second timers.
+I built it to observe BGP path selection and failover directly. The lab includes a controlled A to C link failure, an alternate route through B, and a timer comparison between default BGP behavior and shorter 3/9 second timers.
 
 ### [Shipment Tracker](https://github.com/PatienceEnoch/shipment-tracker)
 
@@ -34,15 +34,15 @@ A Python/FastAPI workflow application that tracks whether a sales order receives
 
 It includes persistent state, overdue alerts, deduplication, API endpoints, a browser dashboard, and automated tests.
 
-### [Site-to-Site IPsec VPN Lab](https://github.com/PatienceEnoch/Ubuntu-virtual-network-lab/blob/main/docs/local-site-to-site-ipsec-validation.md)
+### [Site to Site IPsec VPN Lab](https://github.com/PatienceEnoch/Ubuntu-virtual-network-lab/blob/main/docs/local-site-to-site-ipsec-validation.md)
 
 A routed Linux VPN lab connecting an Ubuntu client network to a simulated cloud network through strongSwan IKEv2/IPsec.
 
-I validated the complete path across routing, NAT exemption, XFRM policy/state, encryption, forwarding, ARP, tcpdump, return routing, network namespaces, and reboot persistence. The finished build passes end-to-end traffic from `10.10.10.10` to `10.20.0.10` with 0% packet loss after rebooting both gateway sides.
+I validated the complete path across routing, NAT exemption, XFRM policy/state, encryption, forwarding, ARP, tcpdump, return routing, network namespaces, and reboot persistence. The finished build passes end to end traffic from `10.10.10.10` to `10.20.0.10` with 0% packet loss after rebooting both gateway sides.
 
 ### [Tor Middle Relay](https://github.com/PatienceEnoch/TOR_Relay)
 
-A documented non-exit Tor middle relay focused on Linux service administration, TCP/IP, ports, logging, and traffic validation.
+A documented non exit Tor middle relay focused on Linux service administration, TCP/IP, ports, logging, and traffic validation.
 
 ## Architecture Journal
 
@@ -50,7 +50,7 @@ My [Cloud Network Architecture Journal](https://github.com/PatienceEnoch/Cloud-N
 
 - BGP path selection and convergence
 - Failure domains
-- Local-first observability
+- Local first observability
 - Guarded remediation and rollback
 - Distributed systems
 - Cloud architecture
@@ -65,7 +65,7 @@ My [Cloud Network Architecture Journal](https://github.com/PatienceEnoch/Cloud-N
 - **Cloud & Infrastructure:** AWS, VPC networking, S3, CloudWatch, IAM, Terraform
 - **Development & Automation:** Python, FastAPI, SQLAlchemy, pytest, Ruff, GitHub Actions, JSON, CLI tooling
 - **Containers:** Docker, Docker Compose
-- **Security:** access control, evidence protection, dependency auditing, secure-by-default design
+- **Security:** access control, evidence protection, dependency auditing, secure by default design
 
 ## Education & Certifications
 
@@ -82,7 +82,7 @@ B.S. Cloud and Network Engineering, AWS Track, in progress
 
 I am currently focused on CCNA concepts, AWS networking, BGP and routing behavior, Python automation, network observability, and hybrid cloud connectivity.
 
-The next major architecture build is a simulated on-premises environment connected to AWS, followed by Transit Gateway, segmented VPCs, Terraform automation, and observability.
+The next major architecture build is a simulated on premises environment connected to AWS, followed by Transit Gateway, segmented VPCs, Terraform automation, and observability.
 
 ## Contact
 
