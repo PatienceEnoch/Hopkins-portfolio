@@ -1,4 +1,4 @@
-# Ashley "Patience" Hopkins — Cloud & Network Engineering Portfolio
+# Ashley "Patience" Hopkins | Cloud & Network Engineering Portfolio
 
 I am a WGU Cloud and Network Engineering student on the AWS track, building toward security-aware network and cloud engineering roles.
 
@@ -70,7 +70,7 @@ My [Cloud Network Architecture Journal](https://github.com/PatienceEnoch/Cloud-N
 ## Education & Certifications
 
 **Western Governors University**  
-B.S. Cloud and Network Engineering — AWS Track, in progress
+B.S. Cloud and Network Engineering, AWS Track, in progress
 
 - CompTIA Network+
 - CompTIA A+
